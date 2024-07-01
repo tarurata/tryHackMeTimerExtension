@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "TryHackMe Timer Extension",
+  "version": "1.0",
+  "description": "A timer for TryHackMe challenges.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": [
+      "https://tryhackme.com/*"
+  ],
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://tryhackme.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
