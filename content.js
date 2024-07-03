@@ -65,10 +65,8 @@ function checkForString() {
     if (document.body.innerText.includes(targetString)) {
         console.log("Target string found! Starting the countdown.");
         startCountdown('Answer Countdown');
-    } else {
-        console.log("Target string not found. Retrying in 1 second...");
-        setTimeout(checkForString, 1000); // Retry every second
     }
+    setTimeout(checkForString, 1000); // Check every second
 }
 
 // Function to create the timer panel with a "Start Timer Again" button
